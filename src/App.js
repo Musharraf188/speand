@@ -1,5 +1,6 @@
 
 import Expenses from "./components/Expenses/Expenses";
+import NewExpenses from "./components/NewExpenses/NewExpenses";
 import Card from "./components/UI/Card";
 
 function App(){
@@ -31,7 +32,8 @@ function App(){
     
 
   ]
-  return <Card> <p>Hello World..!</p>
+  return <Card> 
+    <NewExpenses />
 <Expenses items={expenses}/>
   </Card>
 }
