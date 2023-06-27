@@ -1,10 +1,11 @@
 
+import { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpenses from "./components/NewExpenses/NewExpenses";
 import Card from "./components/UI/Card";
 
-function App(){
-  const expenses=[
+
+  const DUMMY_EXPENSES=[
     {
       id:1,
       title:'Car Insurance',
@@ -32,10 +33,20 @@ function App(){
     
 
   ]
+  const App =()=>{
+    const [expenses, setExpense] = useState(DUMMY_EXPENSES);
+    const addHandler =(userIput)=>{
+      setExpense((preValue=>{
+        return [userIput, ...preValue];
+      }))
+          }
+  
+  
+ 
   return <Card> 
-    <NewExpenses />
+    <NewExpenses onAdd={addHandler}/>
 <Expenses items={expenses}/>
   </Card>
-}
+  }
 
 export default App;
