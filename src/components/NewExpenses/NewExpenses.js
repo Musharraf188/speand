@@ -17,9 +17,8 @@ const NewExpenses = (props) => {
         setIsEditing(false)
     }
     return <div className='new-expense'>
-        {!isEditing &&<button onClick={changeForm}>Add New Expense</button>}
-       {<ExpenseForm onCancel={stopHandler} onSaveData={enterUser} />}
-
+        {!isEditing && <button onClick={changeForm}>Add New Expense</button>}
+       {isEditing && <ExpenseForm onCancel={stopHandler} onSaveData={enterUser} />}
     </div>
 }
 
