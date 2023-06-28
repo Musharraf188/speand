@@ -7,7 +7,7 @@ import Card from "./components/UI/Card";
 
   const DUMMY_EXPENSES=[
     {
-      id:1,
+      id:0,
       title:'Car Insurance',
       amount:243.98,
       date:new Date(2020, 6, 12)
@@ -19,13 +19,13 @@ import Card from "./components/UI/Card";
       date:new Date(2020, 6, 12)
     },
     {
-      id:1,
+      id:2,
       title:'Car Insurance',
       amount:243.98,
       date:new Date(2020, 6, 12)
     },
     {
-      id:1,
+      id:3,
       title:'Car Insurance',
       amount:243.98,
       date:new Date(2020, 6, 12)
